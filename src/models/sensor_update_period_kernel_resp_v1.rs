@@ -33,9 +33,9 @@ pub struct SensorUpdatePeriodKernelRespV1 {
     #[serde(rename = "version")]
     pub version: String,
     #[serde(rename = "ztl_module_supported_sensor_versions")]
-    pub ztl_module_supported_sensor_versions: Vec<String>,
+    pub ztl_module_supported_sensor_versions: Option<Vec<String>>,
     #[serde(rename = "ztl_supported_sensor_versions")]
-    pub ztl_supported_sensor_versions: Vec<String>,
+    pub ztl_supported_sensor_versions: Option<Vec<String>>,
 }
 
 impl SensorUpdatePeriodKernelRespV1 {
@@ -51,8 +51,8 @@ impl SensorUpdatePeriodKernelRespV1 {
         release: String,
         vendor: String,
         version: String,
-        ztl_module_supported_sensor_versions: Vec<String>,
-        ztl_supported_sensor_versions: Vec<String>,
+        ztl_module_supported_sensor_versions: Option<Vec<String>>,
+        ztl_supported_sensor_versions: Option<Vec<String>>,
     ) -> SensorUpdatePeriodKernelRespV1 {
         SensorUpdatePeriodKernelRespV1 {
             architecture,

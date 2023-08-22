@@ -12,7 +12,7 @@
 pub struct SensorUpdatePeriodKernelsRespV1 {
     /// A collection of any errors which occurred during execution of the request
     #[serde(rename = "errors")]
-    pub errors: Vec<crate::models::MsaspecPeriodError>,
+    pub errors: Option<Vec<crate::models::MsaspecPeriodError>>,
     #[serde(rename = "meta")]
     pub meta: Box<crate::models::MsaspecPeriodMetaInfo>,
     #[serde(rename = "resources")]
@@ -21,7 +21,7 @@ pub struct SensorUpdatePeriodKernelsRespV1 {
 
 impl SensorUpdatePeriodKernelsRespV1 {
     pub fn new(
-        errors: Vec<crate::models::MsaspecPeriodError>,
+        errors: Option<Vec<crate::models::MsaspecPeriodError>>,
         meta: crate::models::MsaspecPeriodMetaInfo,
         resources: Vec<crate::models::SensorUpdatePeriodKernelRespV1>,
     ) -> SensorUpdatePeriodKernelsRespV1 {

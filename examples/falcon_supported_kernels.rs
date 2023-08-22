@@ -30,7 +30,7 @@ async fn main() {
         Some(limit),
     )
     .await
-    .expect("Count not fetch sensor update policy.");
+    .expect("Could not fetch sensor update policy.");
 
     dbg!(&sensor_update_response);
 }
